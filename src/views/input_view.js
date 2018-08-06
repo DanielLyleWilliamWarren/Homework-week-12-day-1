@@ -9,6 +9,7 @@ InputView.prototype.bindEvents = function () {
   input.addEventListener('input', (evt) => {
     const inputWord = evt.target.value;
     PubSub.publish('InputView:text-inputted', inputWord);
+    console.log(inputWord);
   });
 };
 

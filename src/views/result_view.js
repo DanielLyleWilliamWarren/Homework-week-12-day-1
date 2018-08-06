@@ -14,7 +14,9 @@ ResultView.prototype.bindEvents = function () {
 
 ResultView.prototype.updateView = function (result) {
   const resultElement = document.querySelector('#result')
-  resultElement.textContent = `The word has ${WordChecker.getWordLength} letters!`;
+  if (result){
+  resultElement.textContent = `The text has ${result} words!`;
+}
 };
 
 module.exports = ResultView;
