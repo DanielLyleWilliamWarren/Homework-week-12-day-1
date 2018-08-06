@@ -5,10 +5,10 @@ const InputView = function (){
 };
 
 InputView.prototype.bindEvents = function () {
-  const input = document.querySelector('#word');
+  const input = document.querySelector('#text');
   input.addEventListener('input', (evt) => {
     const inputWord = evt.target.value;
-    PubSub.publish('InputView:word-inputted', inputWord);
+    PubSub.publish('InputView:text-inputted', inputWord);
   });
 };
 
